@@ -7,8 +7,9 @@ body.style.backgroundColor = 'violet'
 button.addEventListener('click', changeBackground)
 
 function changeBackground() {
-    for (let color of colors) {
-        body.style.backgroundColor += colors[color];
-
-    }
+  // the math.random() method is being set to return numbers between 0 and the length of the colors array it returns that number as a String
+    //then parseInt converts the string to a number and we use colorIndex as the sub on colors.
+    const colorIndex = parseInt(Math.random() * colors.length)
+    console.log(colorIndex);
+    body.style.backgroundColor = colors[colorIndex]
 }
